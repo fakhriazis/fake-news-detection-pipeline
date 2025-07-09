@@ -44,8 +44,9 @@ fake-news-detection-pipeline/
 
 ## ⚙️ Cara Menjalankan
 
-### 1. Clone Repository
+###
 ```bash
+1. Clone Repository
 git clone https://github.com/USERNAME/fake-news-detection-pipeline.git
 cd fake-news-detection-pipeline
 
