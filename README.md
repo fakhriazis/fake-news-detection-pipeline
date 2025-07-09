@@ -27,17 +27,28 @@ Proyek ini adalah end-to-end pipeline berbasis **Apache Airflow** yang digunakan
 
 ## 🧪 Struktur Proyek
 
+```
 fake-news-detection-pipeline/
-├── app/ # UI Streamlit
-├── dags/ # Airflow DAG
-├── notebooks/ # Notebook training model
-├── scripts/ # Scraper, cleaner, prediction
-├── models/ # Trained model (joblib)
-├── requirements.txt
-├── Dockerfile
-├── docker-compose.yml
-├── .gitignore
-└── README.md
+│
+├── app/                  # UI Interaktif menggunakan Streamlit
+│
+├── dags/                 # DAG untuk Apache Airflow
+│
+├── notebooks/            # Notebook untuk training dan eksperimen model
+│
+├── scripts/              # Script untuk scraping, cleaning, dan prediction
+│   ├── scrape_news.py
+│   ├── clean_news.py
+│   └── predict.py
+│
+├── models/               # Model hasil training (disimpan dalam format .joblib)
+│
+├── Dockerfile            # Dockerfile utama proyek
+├── docker-compose.yml    # Docker Compose untuk orkestrasi layanan
+├── requirements.txt      # Daftar dependency Python
+├── .gitignore            # File untuk mengabaikan file/folder tertentu di Git
+└── README.md             # Dokumentasi utama proyek
+```
 
 
 ---
