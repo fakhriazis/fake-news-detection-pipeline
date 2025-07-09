@@ -1,0 +1,10 @@
+feedparser
+requests
+beautifulsoup4
+pymongo
+psycopg2-binary
+nltk
+scikit-learn
+pandas
+joblib
+apache-airflow

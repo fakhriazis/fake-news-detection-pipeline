@@ -1,0 +1,41 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/mongo:/data/db
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: fakenews
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:123@postgres:5432/fakenews
+    depends_on:
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "airflow db migrate &&
+               airflow users create --username admin --password admin --firstname Fakhri --lastname Basiri --role Admin --email admin@example.com &&
+               airflow webserver & airflow scheduler"
+

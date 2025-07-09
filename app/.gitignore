@@ -1,0 +1,39 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
+
+# Virtual environment
+venv/
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temp
+*.log
+logs/
+tmp/
+.airflow/
+
+# VSCode
+.vscode/
+
+# Docker
+*.pid
+*.db
+.dockerignore
+
+# Airflow & DVC
+dags/__pycache__/
+dags/*.pyc
+airflow.db
+airflow.cfg
+untracked/
+
+# Jupyter runtime
+~$*
+.DS_Store
