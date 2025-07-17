@@ -1,10 +1,10 @@
-# 📰 Fake News Detection Pipeline
+# Fake News Detection Pipeline
 
 Proyek ini adalah end-to-end pipeline berbasis **Apache Airflow** yang digunakan untuk melakukan scraping berita dari berbagai sumber RSS, membersihkannya, menyimpannya di database, melatih model deteksi hoax, dan menyediakan antarmuka interaktif untuk prediksi menggunakan **Streamlit**.
 
 ---
 
-## 🚀 Fitur
+## Fitur
 
 - Scraping otomatis berita harian dari Detik, Kompas, Antara
 - Preprocessing teks (pembersihan dan filtering)
@@ -14,7 +14,7 @@ Proyek ini adalah end-to-end pipeline berbasis **Apache Airflow** yang digunakan
 
 ---
 
-## 🧱 Teknologi
+## Teknologi
 
 - Python 3.10
 - Apache Airflow
@@ -25,7 +25,7 @@ Proyek ini adalah end-to-end pipeline berbasis **Apache Airflow** yang digunakan
 
 ---
 
-## 🧪 Struktur Proyek
+## Struktur Proyek
 
 ```
 fake-news-detection-pipeline/
@@ -53,7 +53,7 @@ fake-news-detection-pipeline/
 
 ---
 
-## ⚙️ Cara Menjalankan
+## Cara Menjalankan
 
 ###
 ```bash
